@@ -1,0 +1,36 @@
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<div class="div" style="padding-top:150px;padding-left: 150px;">
+    <div class="card"  style="width: 70%;">
+        <div class="card-header" style="text-align: center;font-weight: bold;background-color: cadetblue; ">Interest Type</div>
+        <div class="card-body">
+            
+            <div class="form-group">
+                <label for="Name">Interest Type</label>
+                <input type="text" class="form-control" name="intype" id="intype" >
+              </div>
+              <button onclick="submit()">Submit</button>
+        </div>
+    </div>
+</div>
+<script>
+    function submit(){
+        $.ajaxSetup({
+ headers: { "X-CSRFToken": '{{csrf_token}}' }
+});
+$.ajax({
+    url: '/adminapp/interest/',
+    method:'POST',
+    data:{
+        intype: $('#intype').val()
+    },
+    success: function(response){
+     alert(response.msg)
+      location.reload(true)
+    }
+})
+    }
+</script>
+{% endblock %}

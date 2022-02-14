@@ -1,0 +1,220 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+        <title>Pawn Software</title>
+        
+        
+        <!-- <script>
+            window.onload=function(){
+                getdetails()
+            }
+         </script> -->
+    </head>
+  <style>
+      .nav-item{
+          padding-bottom: 20px;
+          padding-left: 10px;
+      }
+      table, th, td {
+  border: 1px solid black;
+      }
+  </style>
+<body >
+    <!-- navbar -->
+    <div class="wrapper">
+    <div class="row">
+        <div class="col-lg-12" style="padding-left:500px;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light "style="left:0;position:fixed;right:0;top:0;" > 
+                <button class="navbar-toggler d-md-none collapsed" type="button" data-toggle="collapse"
+                    data-target="#sidebarmenus" aria-controls="sidebarmenus" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="sidebarmenus">
+
+                    <ul class="navbar-nav ml-auto">
+                       
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <i class='far fa-bell' style='font-size:20px' id="notify"></i>
+                                
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="" id="navbarDropdownProfile" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                               
+                                <i class='fas fa-user-cog' style='font-size:20px' id="p"></i>
+                               
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                                <a class="dropdown-item" href="">Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="">Log out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </div>
+    <!-- end of navbar -->
+    <!-- Vertical navbar -->
+    <!-- <div class="container-fluid "> -->
+    <div class="row">
+        <div class="col-lg-2 col-sm-2 col-xs-2 col-12 vh-100% ">
+            <nav id= "sidebarmenus" class="nav navbar-light bg-dark  collapse vh-100 elevation-4" data-widget="treeview" style="padding-top: 15px;padding-left:1px; display: block;left: inherit;">
+                <div class="wrapper d2" > 
+                    <div class="sidebar"> 
+                        <div class="sidebar-fixed" >
+                            <ul class="nav nav-treeview" style="height:500px; width: 400px;display: block;">
+                                <li class="nav-item" style="padding-top: 10px; ">
+                                    <h4 style="color:white ;padding-left: 10px;">Pawn Software</h4>
+                                    
+                                </li>
+                                
+                                <!-- <div class="square" style="height:15%;width:95%;background-color:blue;"> -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="" style="color:white">
+                                        <i class="material-icons" style="display: inline-block;font-size:20px;">dashboard</i>
+                                        <h6 style="display: inline-block; padding-left: 10px;font-size:1.3em; font-weight:300;">Dashboard</h6>
+                                    </a>
+                                </li>
+                            <!-- </div> -->
+                            
+                            <!-- <div class="square" style="height:15%;width:95%;background-color:blue;"> -->
+                                <li class="nav-item">
+                                    <a class="nav-link collapsed"
+                           href="#navbars-hr" data-toggle="collapse" role="button"
+                           aria-expanded="false"
+                           aria-controls="navbars-hr" style="color:white">
+                            <i class="material-icons" style="display: inline-block;font-size:20px; ">inbox</i>
+                            <h6 style="display: inline-block; padding-left: 10px;font-size:1.3em; font-weight:300;">Master</h6>
+                            <i class="material-icons" style="display: inline-block;font-size:20px; ">expand_more</i>
+                        </a>
+                                    <div class="collapse"
+                             id="navbars-hr">
+                            <ul class="nav flex-column submenu-ul">
+                                <li class="nav-item ">
+                                    <a href="/adminapp/items/" class="nav-link" style="color:white">Items</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="/adminapp/itemgroup/" class="nav-link" style="color:white">Item Group</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="/adminapp/interest/" class="nav-link" style="color:white">Interest Type</a>
+                                </li>
+                                 </ul>
+                                 </div>
+                                </li>
+                          
+                                <li class="nav-item">
+                                    <a class="nav-link collapsed"
+                           href="#navbar-hr" data-toggle="collapse" role="button"
+                           aria-expanded="false"
+                           aria-controls="navbar-hr" style="color:white">
+                            <i class="material-icons" style="display: inline-block;font-size:20px; ">people</i>
+                            <h6 style="display: inline-block; padding-left: 10px;font-size:1.3em; font-weight:300;">Customer</h6>
+                            <i class="material-icons" tyle="display: inline-block;font-size:15px; ">expand_more</i>
+                        </a>
+                                    <div class="collapse"
+                             id="navbar-hr">
+                            <ul class="nav flex-column submenu-ul">
+                                <li class="nav-item ">
+                                    <a href="/adminapp/customer/" class="nav-link"style="color:white" >New Customer</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="" class="nav-link" style="color:white">Customer History</a>
+                                </li>
+                                
+                                 </ul>
+                                 </div>
+                                </li>
+                               
+                                <li class="nav-item">
+                                    <a class="nav-link collapsed"
+                           href="#navbar-hrs" data-toggle="collapse" role="button"
+                           aria-expanded="false"
+                           aria-controls="navbar-hrs" style="color:white">
+                            <i class="material-icons" style="display: inline-block;font-size:20px; ">monetization_on</i>
+                            <h6 style="display: inline-block; padding-left: 10px;font-size:1.3em; font-weight:300;">Transcation</h6>
+                            <i class="material-icons" style="display: inline-block;font-size:20px; ">expand_more</i>
+                        </a>
+                                    <div class="collapse"
+                             id="navbar-hrs">
+                            <ul class="nav flex-column submenu-ul">
+                                <li class="nav-item ">
+                                    <a href="/adminapp/newloan/" class="nav-link" style="color:white">New Loan</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="/adminapp/loanhistory/" class="nav-link" style="color:white">Loan History</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="" class="nav-link" style="color:white">Report</a>
+                                </li>
+                                   
+                                 </ul>
+                                 </div>
+                                </li>
+                                
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="" style="color:white">
+                                        <i class="material-icons" style="display: inline-block;font-size:20px; ">notifications</i>
+                                        <h6 style="display: inline-block; padding-left: 10px;font-size:1.3em; font-weight:300;">Notifications</h6>
+                                    </a>
+                                </li>
+                                
+        
+                            </ul>
+                        </div>
+                    </div>
+                  </div>
+                
+
+            </nav>
+        </div>
+        <div class="col-lg-9" >
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+<!-- </div> -->
+    <div class="row">
+        <div class="col-lg-12 " style="text-align: center;padding-top: 80px;">
+            <h6><span style="color:black;">©copyrights</span></h6>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+   
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <title>Admin Login</title>
+</head>
+<body>
+    <form action="/adminapp/adminlogin/" method="POST">
+        {% csrf_token %}
+      <div class="div" style="padding-top: 150px;" >
+        <center>
+            <div class="card" style="width: 400px;text-align: start;color:black;">
+                <div class="card-header" style="text-align: center;font-weight: bold; background-color: cadetblue;" >Admin Login</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="Name">Username</label>
+                        <input type="email" class="form-control" name="email" >
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="Password">Password</label>
+                        <input type="password" class="form-control" name="password" >
+                      </div>
+                      <center>
+                        <button  class="btn btn-secondary" >Log In</button>
+                      </center>
+                      </div>
+            </div>
+        </center>
+      </div>
+    </form>       
+
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+          crossorigin="anonymous"></script>
+  
+     
+
+
+
+</body>
+</html>

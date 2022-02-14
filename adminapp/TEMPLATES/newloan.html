@@ -1,0 +1,213 @@
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
+<div class="div" style="padding-top: 90px;" >
+  <div class="row">
+    <div class="col-lg-12"  style="padding-top:50px;">
+     <div class="card">
+         <div class="card-header" style="background-color: cadetblue;">Customer Details</div>
+         <div class="card-body">
+            <div class="form-group">
+                <label for="date">Loan Date</label>
+                <input type="date" class="form-control" name="date" >
+              </div>
+
+              <div class="form-group">
+                  <div class="row">
+                      <div class="col-lg-6">
+                        <label for="Name">Customer Id</label>
+                        <input type="text" class="form-control" name="cid" >
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="Name">Customer Name</label>
+                        <input type="text" class="form-control" name="name">
+                      </div>
+                    </div>
+                    </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <label for="address">Address</label>
+                             <input type="text" class="form-control" name="text" >   
+                          </div>
+                          <div class="col-lg-6">
+                            <label for="City">City</label>
+                            <input type="text" class="form-control" name="city" >
+                        </div>
+                        </div>
+                        
+                      </div>
+                      <div class="form-group">
+                          <div class="row">
+                              
+                              <div class="col-lg-4">
+                                  <label for="State">State</label>
+                                  <input type="text" class="form-control" name="state" >
+                              </div>
+                              <div class="col-lg-4">
+                                  <label for="Country">Country</label>
+                                  <input type="text" class="form-control" name="country" >
+                              </div>
+                              <div class="col-lg-4">
+                                  <label for="Pincode">Pincode</label>
+                                  <input type="text" class="form-control" name="pincode" >
+                              </div>
+                          </div>
+
+                  </div>
+                
+              </div>
+         </div>
+     </div>  
+    </div>
+    <div class="row" style="padding-top:50px; ">
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="card-header" style="background-color: cadetblue;">Item Details</div>
+          <div class="card-body">
+            <table class="table" id="table" style="border: 1px solid black;">
+              <thead >
+                <tr>
+                  
+                  <th scope="col">Item Name</th>
+                  <th scope="col">Qty</th>
+                  <th scope="col">Gross Wt</th>
+                  <th scope="col">Net Wt</th>
+                  <th scope="col">Purity</th>
+                  <th scope="col">Value</th>
+                  <th scope="col">Remark</th>
+                  <th scope="col"><button class="btn btn-outline-none border-left-0 border" type="button" onclick="addRow()">
+                    <i class = "material-icons">add_circle</i>
+              </button></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  
+                  <td name='iname' contenteditable='true'></td>
+                  <td name='qty'  contenteditable='true'></td>
+                  <td name='gwt'  contenteditable='true'></td>
+                  <td name='nwt'  contenteditable='true'></td>
+                  <td name='purity' contenteditable='true'></td>
+                  <td name='value'  contenteditable='true'></td>
+                  <td name='remark' contenteditable='true'></td>
+                  <td><button>Delete</button></td>
+                  
+                </tr>
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+        <div class="col-lg-4"  >
+         <div class="card">
+             <div class="card-header" style="background-color: cadetblue;">Loan Details</div>
+             <div class="card-body">
+                  <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-12">
+                          <label for="Name">Loan Amount</label>
+                          <input type="text" class="form-control" name="cid" >
+                        </div>
+                        <div class="col-lg-12">
+                          <label for="Name">Interest Rate</label>
+                          <div class="row">
+                            <div class="col-lg-4">
+                              <input type="text" class="form-control" name="name">
+                            </div>
+                            <div class="col-lg-8">
+                              <input type="text" class="form-control" name="name">
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="item">Advance Paid</label>
+                        <div class="row">
+                        <div class="col-lg-4">
+                          <input type="text" class="form-control" name="date" >
+                        </div>
+                        <div class="col-lg-8">
+                          <input type="text" class="form-control" name="date" >
+                        </div>
+                      </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="item">Processing Fee</label>
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <input type="text" class="form-control" name="date" >
+                          </div>
+                          <div class="col-lg-8">
+                            <input type="text" class="form-control" name="date" >
+                          </div>
+                        </div>
+                        
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="item">No.of Installments</label>
+                        <input type="text" class="form-control" name="date" >
+                      </div>
+                      <div class="form-group">
+                        <label for="item">Net Payable</label>
+                        <input type="text" class="form-control" name="date" >
+                      </div>
+                      <div class="form-group">
+                        <label for="item">Maturing Date</label>
+                        <input type="text" class="form-control" name="date" >
+                      </div>
+                      <div class="form-group">
+                        <label for="item">Payment Mode</label>
+                        <input type="text" class="form-control" name="date" >
+                      </div>
+         </div>
+        
+        
+        </div>
+    </div>
+    
+</div>
+</div>
+<br>
+<center>
+    <div>
+        <button btn style="background-color: cadetblue; width: 150px;">Create</button>
+    </div>
+</center>
+<script>
+  function addRow() {
+    var table = document.getElementById("table");
+    
+  var row = table.insertRow(2);
+  var cell1 = row.insertCell(0);
+  cell1.setAttribute('contentEditable', 'true');
+  var cell2 = row.insertCell(1);
+  cell2.setAttribute('contentEditable', 'true');
+  var cell3 = row.insertCell(2);
+  cell3.setAttribute('contentEditable', 'true');
+  var cell4 = row.insertCell(3);
+  cell4.setAttribute('contentEditable', 'true');
+  var cell5 = row.insertCell(4);
+  cell5.setAttribute('contentEditable', 'true');
+  var cell6 = row.insertCell(5);
+  cell6.setAttribute('contentEditable', 'true');
+  var cell7 = row.insertCell(6);
+  cell7.setAttribute('contentEditable', 'true');
+  var cell8 = row.insertCell(7);
+  var element1 = document.createElement("input");  
+  element1.type = "button";  
+  var btnName = "button" + (rowCount + 1);  
+  element1.name = btnName;  
+  element1.setAttribute('value', 'Delete'); // or element1.value = "button";  
+  element1.onclick = function () { removeRow(btnName); }  
+  cell8.appendChild(element1);  
+           
+
+}
+</script>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
+<div class="div" style="padding-top: 90px;" >
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">Loan History</div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped mb-0 dataTable" id="table" >
+                        <thead>
+                        <tr>
+                            <th width="5%">Sl.no</th>
+                            <th width="15%">Customer Id</th>
+                            <th width="15%">Loan Date</th>
+                            <th width="15%">Customer Name</th>
+                            <th width="15%">Mobile</th>
+                            <th width="15%">Email</th>
+                            <th width="15%">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="font-style">
+                           
+                                </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Meeting</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="card">
+                        <div class="card-header">Loan History</div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped mb-0 dataTable" id="table" >
+                                    <thead>
+                                    <tr>
+                                        <th width="5%">Sl.no</th>
+                                        <th width="15%">Loan no:</th>
+                                        <th width="15%">Loan Date</th>
+                                        <th width="15%">Customer Name</th>
+                                        <th width="15%">Interest</th>
+                                        <th width="15%">Gross wt</th>
+                                        <th width="15%">Net wt</th>
+                                        <th width="15%">MarketValue</th>
+                                        <th width="15%">Loan Amount</th>
+                                        <th width="15%">Advance Paid</th>
+                                        <th width="15%">Net Amount</th>
+                                        <th width="15%">Maturity Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="font-style">
+                                       
+                                            </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+{% endblock %}
